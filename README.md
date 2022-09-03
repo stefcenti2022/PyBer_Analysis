@@ -6,20 +6,21 @@ The CEO of PyBer, V. Isuualize, requested an analysis of the company's ride-shar
 To help with the visualizations, this project used Matplotlib and Jupyter Notebook to the charts that are used in this analysis. The charts presented show the various relationships between city types and other data such as the number of riders, drivers, and fares.
 
 
-The results of the analyis will be covered first followed by a summary of recommendations based on the results of this analysis.
+The results of the analysis will be covered first followed by a summary of recommendations based on the results of this analysis.
 
 ## Results
 
 There are 3 distinct city types included in PyBer's data: Urban, Suburban, and Rural. The datasets from these different types of cities vary greatly when comparing one against the other. This section contains several charts showing these relationships in a concise, clear manner.
 
-The results are divided into the following sections to show the differences between the 3 differenty city types for these Ride-sharing metrics:
+The results are divided into the following sections to show the differences between the 3 different city types for these Ride-sharing metrics:
 - Total Rides
 - Total Drivers
 - Total Fares
-- Average Fare per Ride and Driver
-- Total Fare
+- Average Fare per Ride 
+- Average Fare per Driver
+- Total Weekly Fares by City Type
 
-Before analysis, the 2 input files, city_data.csv and ride_data.csv were read in and merged to create a simple dataframe to analyize various stats such as Total Drivers and sum of all Fares for each city type.  Later this data was used to create more complicated relationships to get a better understanding of how the stats were affected by the different types of cities to present a multi-line graph entitled "Total Fare by City Type".
+Before analysis, the 2 input files, city_data.csv and ride_data.csv were read in and merged to create a simple dataframe to analyze various stats such as Total Drivers and sum of all Fares for each city type.  Later this data was used to create more complicated relationships to get a better understanding of how the stats were affected by the different types of cities to present a multi-line graph entitled "Total Fare by City Type".
 
 The Pyber Summary dataframe can be seen here: 
 
@@ -31,7 +32,7 @@ From the above image we can see the number of Total Rides and Total Drivers, the
 
 The following table shows the breakdown for total rides by city type:
 | City Type | Total Rides |
-|-----------|-------------|
+|:---       |         ---:| 
 | Rural     |     125     |
 | Suburban  |     625     |
 | Urban     |   1,625     |
@@ -48,26 +49,47 @@ As we look at the total number of drivers and the total sum of the fares receive
 
 The following table shows the breakdown for total drivers by city type:
 | City Type | Total Drivers |
-|-----------|---------------|
+|:---       |           ---:| 
 | Rural     |        78     |
 | Suburban  |       490     |
 | Urban     |     2,405     |
 
-Here a rough calculation shows that suburban cities have more than 5 times the number of drivers as rural cities and urban ones have over 25 times the number of drivers than urban ones.  Urban cities also have approximately 5 times the number of drivers than in the suburbs.
+A rough calculation shows that suburban cities have more than 5 times the number of drivers as rural cities and urban ones have over 25 times the number of drivers than urban ones.  Urban cities also have approximately 5 times the number of drivers than in the suburbs.
 
-TODO: add more detail
+TODO: add more detail (this could go in summary when comparing to other metrics)
 
 ### Total Fares
 
-TODO: add table here with observations.
+The following table shows the breakdown for total fares for each city type:
+| City Type | Total Fares |
+|:---       |         ---:| 
+| Rural     |  $4,327.93  |
+| Suburban  | $19,356.33  |
+| Urban     | $39,854.38  |
 
-### Average Fare per Ride and Driver
+### Average Fare per Ride
 
-TODO: add table here with observations.
+The following table shows the breakdown of average fares of a ride in each type of city:
+| City Type | Average Fare per Ride |
+|:---       |                   ---:| 
+| Rural     | $34.62                |
+| Suburban  | $30.97                |
+| Urban     | $24.53                |  
 
-### Total Fare by City Type
+### Average Fare per Driver
 
-TODO: add Line Chart here with observations.
+The following table shows the breakdown of average fares charged by a driver in each type of city:
+| City Type | Average Fare per Driver |
+|:---       |                     ---:| 
+| Rural     | $55.49                  |
+| Suburban  | $39.50                  |
+| Urban     | $16.57                  |
+
+### Total Weekly Fares by City Type
+
+The image below shows a sum of the weekly fares earned in each type of city over the period starting on the first week of January through the last week of April 2019:
+
+<img src="./Resources/weekly_fare_by_type.jpeg" alt="Pyber Summary DF" width="600"/>
 
 ## Summary
 
