@@ -28,6 +28,10 @@ The Pyber Summary dataframe can be seen here:
 
 From the above image we can see the number of Total Rides and Total Drivers, the Sum of all the Fares, the Average Fare per Ride and the Average Fare per Driver. The values for these metrics have been broken down into 3 categories based on the type of city Rural, Suburban and Urban. 
 
+The bubble chart below shows the relationship between the number of rides, number of drivers and the average fares depending on the type of city:
+
+<img src="./analysis/Fig1.png" alt="Summary Bubble Chart" width="700"/>
+
 ### Total Rides
 
 The following image shows the Percentage of total rides by city type
