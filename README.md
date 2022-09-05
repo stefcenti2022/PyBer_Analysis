@@ -9,7 +9,15 @@ The results of the analysis will be covered first followed by a summary of recom
 
 ## Results
 
-There are 3 distinct city types included in PyBer's data: Urban, Suburban, and Rural. The datasets from these different types of cities vary greatly when comparing one against the other. This section contains several tables and charts showing these relationships.
+Before analysis, the 2 input files, city_data.csv and ride_data.csv were read in and merged to create a summary dataframe to analyze various stats such as Total Drivers and sum of all Fares for each city type.  Later this data was used to display more complicated relationships using a multi-line chart to get a better understanding of how the stats were affected by the different types of cities.
+
+The Pyber Summary dataframe can be seen here: 
+
+<img src="./analysis/pyber_summary_df.jpeg" alt="Pyber Summary DF" width="600"/>
+
+From the above image we can see the number of Total Rides and Total Drivers, the Sum of all the Fares, the Average Fare per Ride and the Average Fare per Driver. The values for these metrics have been broken down into 3 categories based on the type of city Rural, Suburban and Urban. 
+
+The datasets from these different types of cities vary greatly when comparing one against the other. This section contains several tables and charts showing these relationships.
 
 The results are divided into the following sections to show the differences between the 3 different city types for these Ride-sharing metrics:
 - Total Rides
@@ -19,29 +27,19 @@ The results are divided into the following sections to show the differences betw
 - Average Fare per Driver
 - Total Weekly Fares by City Type
 
-Before analysis, the 2 input files, city_data.csv and ride_data.csv were read in and merged to create a summary dataframe to analyze various stats such as Total Drivers and sum of all Fares for each city type.  Later this data was used to display more complicated relationships using a multi-line chart to get a better understanding of how the stats were affected by the different types of cities.
-
-The Pyber Summary dataframe can be seen here: 
-
-<img src="./analysis/pyber_summary_df.jpeg" alt="Pyber Summary DF" width="600"/>
-
-From the above image we can see the number of Total Rides and Total Drivers, the Sum of all the Fares, the Average Fare per Ride and the Average Fare per Driver. The values for these metrics have been broken down into 3 categories based on the type of city Rural, Suburban and Urban. 
-
 The bubble chart below shows the relationship between the number of rides, number of drivers and the average fares per ride depending on the type of city:
 
 <img src="./analysis/Fig1.png" alt="Summary Bubble Chart" width="600"/>
 
 ### Total Rides
 
-In the bubble chart shown above we can see how most of the urban cities have the greatest number of rides as most of their datapoints are above 15 total rides. For most suburban cities, total rides fall between 10 and 25 and for rural ones they most are between 5 and 10 rides per city.  The following column from the table above shows the breakdown of total rides followed by a pie chart showing the percentages by city type and confirms the observations in the bubble chart:
+In the bubble chart shown above we can see how most of the urban cities have the greatest number of rides as most of their datapoints are above 15 total rides. For most suburban cities, total rides fall between 10 and 25 and for rural ones they most are between 5 and 10 rides per city.  The following column from the summary table above shows the breakdown of total rides and confirms the observations in the bubble chart:
 
 | City Type | Total Rides |
 |:---       |         ---:| 
 | Rural     |     125     |
 | Suburban  |     625     |
 | Urban     |   1,625     |
-
- 
 
 Rural areas have a lot less people spread out than more densely populated urban areas. This logistical difference may play into the large difference of 125 vs 1,1625 rides in rural cities vs. urban ones. In most rural areas almost everyone has their own car for transportation so it is also a lot less likely that someone is in need of transportation from an outside source. When they do need a car they may be calling on neighbors and family to borrow one or to hitch a ride. This may be an opportunity to look into to see if people in rural areas tend to rely on someone else rather than reaching out to a mobile app service such as PyBer. ***
 
@@ -84,8 +82,6 @@ The following table shows the breakdown for total fares for each city type:
 
 Above, we can see that rural cities collected almost 7% of the total fares during this period. Suburban cities collected approximately 31% and urban ones 63% of all the fares. This is very similar to both the difference in number of drivers and rides, however, urban areas only collected approximately 2 times the amount of fares than suburban cities where the number of drivers was close to 5 times greater. 
 
-This implies that the cost per ride in urban areas is less than the suburbs which was observed in the bubble chart above as well.  Possibly, the fares in urban areas are too low for the number of rides and this may be something to consider for the future. ***
-
 ### Average Fare per Ride
 
 The following table shows the breakdown of average fares of a ride in each type of city:
@@ -95,6 +91,8 @@ The following table shows the breakdown of average fares of a ride in each type 
 | Suburban  | $30.97                |
 | Urban     | $24.53                |  
 
+As seen in the summary above, the cost per ride in urban areas is less than the suburbs.  Possibly, the fares in urban areas are too low for the number of rides and this may be something to consider for the future.
+
 The summary bubble chart is included here with a focus on the "Average Fare($)" on the vertical axis with the "Total Number of Rides (Per City)" on the horizontal axis.
 
 <img src="./analysis/Fig1.png" alt="Summary Bubble Chart" width="600"/>
@@ -103,19 +101,20 @@ Looking at the number of bubbles and their placement on the x and y axis of the 
 
 Note that for fares, both the average rural and suburban fares are greater than the average fares for most rides in urban cities.
 
+This is in line with the averages shown in the summary table.
+
 ### Average Fare per Driver
 
 The following table shows the breakdown of average fares charged by a driver in each type of city:
-| City Type | Average Fare per Driver |
-|:---       |                     ---:| 
-| Rural     | $55.49                  |
-| Suburban  | $39.50                  |
-| Urban     | $16.57                  |
+| City Type | Average Fare per Driver | Total Rides | Total Drivers |
+|:---       |                     ---:|         ---:|           ---:|
+| Rural     | $55.49                  |   125       |    78         |
+| Suburban  | $39.50                  |   625       |   490         |
+| Urban     | $16.57                  | 1,625       | 2,405         |
 
-For rural areas, most of the bubbles fall on the left side of the chart and most are above the $30 range, we can conclude that the fares for most of the rural drivers are significantly higher than those in urban cities in which almost all of the bubbles fall below the $30 average fare.
+In the summary above we see that the average price of a ride in a rural city is significantly higher than both the suburbs and the urban areas.
 
-For suburban cities, the bubbles are almost all 2x larger than the rural ones and roughly 1/2 the size of Urban cities indicating that the number of drivers in the suburbs are in the middle range. The fares for most of the suburban drivers are in the $30 - $35 range while most of the urban fares fall in the $20 - $25 range. This is also a significant difference. Since suburban areas have quite a few more drivers than rural areas, this may be an area to look at when determining best fare prices for urban and suburban drivers. ***
-
+Earlier we observed that rural areas also have a lot less rides. In fact, as shown in the summary table, we can see that having a lot less drivers compared to the number of rides like the rural and suburban cities have results in a higher average fare per Driver.  Urban cities had many more drivers than rides during this time period. In rural and suburban areas each driver has a better chance of having at least one or two rides where the urban cities, almost half of the drivers may not have any ride opportunities. 
 
 ### Total Weekly Fares by City Type
 
@@ -127,23 +126,32 @@ From this multi-line chart we can clearly see how suburban cities fall somewhat 
 
 Some other observations with this chart show there is a peak in fare prices toward the end of February for all types of cities.
 
-TODO: go back to see if there is anything that stands out during this week to indicate why there is a peak and if it matters.
-
 Other notable peaks/dips by city type are as follows:
 
-Total fares collected for urban cities seem to peak around the 4th week of February at 2.5K then fall and rise between the range of 2K - 2.5K for the entire week of March ending with a peak in the first week of April to flatten out around 2.4/2.3 K for the rest of April. These could correlate to spring break weeks in colleges first then grade schools during the weeks of March and April. ***
+Total fares collected for urban cities seem to peak around the 4th week of February at 2.5K then fall and rise between the range of 2K - 2.5K for the entire week of March ending with a peak in the first week of April to flatten out around 2.4/2.3 K for the rest of April. These could correlate to spring break weeks in colleges first then grade schools during the weeks of March and April.
 
 ## Summary
-TODO: Write a summary and include ideas above indicated by ***.
+A few major takeaways from our analysis shows the following:
+- Rural cities have a very high average fare and a low number of riders and a low number of drivers.
+- Suburban cities also have a high average fare per ride compared with urban areas and a much lower number of drivers and rides but not has low as rural cities
+- Urban cities have a very low average fare per ride most likely due to the rides being shorter and while also having many more rides available per driver. These cities also had many more drivers than rides that were available to them.
+
+From the results of our analysis we recommend the following actions:
 
 ### Recommendation 1
-TODO: rec 1
+While the average fare is quite high per driver in rural areas, there are not many rides in these cities. Perhaps lowering the fare price will encourage more riders while not discouraging drivers as they will have more opportunities to drive more often while still earning a decent fare per ride.
 
 ### Recommendation 2
-TODO: rec 2
+During the weeks that colleges and grade schools are off from school ridership seems to increase significantly.  This is particularly true in urban cities.  Perhaps adding more drivers from rural and suburban areas that are not as busy could help increase ridership more while also encouraging drivers to take on more rides.
 
 ### Recommendation 3
-TODO: rec 3
+Since there are almost 2x the number of drivers available than rides in urban cities overall, it is recommended to do further analysis to determine some open questions:
+- How many and which drivers are not getting opportunities to drive?
+- Are certain drivers taking more rides than others that want them but cannot get them?
+- Which cities have too many drivers and why this is the case?
+
+### Recommendation 4
+It is recommended that PyBer survey individual neighborhoods in each city type to determine if there are potential customers that would like a ride using the app but have not been able to get one either due to no driver being available or the fare was too expensive when a driver was in the area. Having neighborhood level data will provide a finer granularity to help determine underserved sections of each city.
 
 ## Technical Notes
 PyBer.ipynb: This is the original notebook created during the first stage of the analysis while completing the modules for this challenge. The code for the summary bubble chart and pie charts included in the notebook for this challenge were from this first notebook.
