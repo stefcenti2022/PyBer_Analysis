@@ -41,7 +41,7 @@ In the bubble chart shown above we can see how most of the urban cities have the
 | Suburban  |     625     |
 | Urban     |   1,625     |
 
-Rural areas have a lot less people spread out than more densely populated urban areas. This logistical difference may play into the large difference of 125 vs 1,1625 rides in rural cities vs. urban ones. In most rural areas almost everyone has their own car for transportation so it is also a lot less likely that someone is in need of transportation from an outside source. When they do need a car they may be calling on neighbors and family to borrow one or to hitch a ride. This may be an opportunity to look into to see if people in rural areas tend to rely on someone else rather than reaching out to a mobile app service such as PyBer. ***
+Rural areas have a lot less people spread out than more densely populated urban areas. This logistical difference may play into the large difference of 125 vs 1,1625 rides in rural cities vs. urban ones. In most rural areas almost everyone has their own car for transportation so it is also a lot less likely that someone is in need of transportation from an outside source. When they do need a car they may be calling on neighbors and family to borrow one or to hitch a ride. This may be an opportunity to look into to see if people in rural areas tend to rely on someone else rather than reaching out to a mobile app service such as PyBer.
 
 Similar to rural areas, suburban cities also had a relatively low amount of riders compared to urban areas. Again, most people in these areas own one or more vehicles so even if one is not available they have another to use instead in many cases.
 
@@ -114,7 +114,7 @@ The following table shows the breakdown of average fares charged by a driver in 
 
 In the summary above we see that the average price of a ride in a rural city is significantly higher than both the suburbs and the urban areas.
 
-Earlier we observed that rural areas also have a lot less rides. In fact, as shown in the summary table, we can see that having a lot less drivers compared to the number of rides like the rural and suburban cities have results in a higher average fare per Driver.  Urban cities had many more drivers than rides during this time period. In rural and suburban areas each driver has a better chance of having at least one or two rides where the urban cities, almost half of the drivers may not have any ride opportunities. 
+Earlier we observed that rural areas also have a lot less rides. In fact, as shown in the summary table, we can see that having a lot less drivers compared to the number of rides results in a higher average fare per Driver.  This was true for both rural and suburban cities during the time period analyzed. Alternatively, urban cities had many more drivers than rides during this time period. 
 
 ### Total Weekly Fares by City Type
 
