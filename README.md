@@ -3,13 +3,13 @@
 ## Overview of Analysis
 The CEO of PyBer, V. Isuualize, requested an analysis of the company's ride-share data starting in January through early May of the year 2019. This data will be used to help improve access to ride-sharing services and determine affordability for underserved neighborhoods.
 
-To help with the visualizations, this project used Matplotlib and Jupyter Notebook to the charts that are used in this analysis. The charts presented show the various relationships between city types and other data such as the number of riders, drivers, and fares.
+To help with the visualizations, this project used Matplotlib and Jupyter Notebook to create the charts that are used in this analysis. The charts presented show the various relationships between city types and other data such as the number of riders, drivers, and fares.
 
 The results of the analysis will be covered first followed by a summary of recommendations based on the results of this analysis.
 
 ## Results
 
-There are 3 distinct city types included in PyBer's data: Urban, Suburban, and Rural. The datasets from these different types of cities vary greatly when comparing one against the other. This section contains several tables showing these relationships.
+There are 3 distinct city types included in PyBer's data: Urban, Suburban, and Rural. The datasets from these different types of cities vary greatly when comparing one against the other. This section contains several tables and charts showing these relationships.
 
 The results are divided into the following sections to show the differences between the 3 different city types for these Ride-sharing metrics:
 - Total Rides
@@ -27,13 +27,13 @@ The Pyber Summary dataframe can be seen here:
 
 From the above image we can see the number of Total Rides and Total Drivers, the Sum of all the Fares, the Average Fare per Ride and the Average Fare per Driver. The values for these metrics have been broken down into 3 categories based on the type of city Rural, Suburban and Urban. 
 
-The bubble chart below shows the relationship between the number of rides, number of drivers and the average fares depending on the type of city:
+The bubble chart below shows the relationship between the number of rides, number of drivers and the average fares per ride depending on the type of city:
 
 <img src="./analysis/Fig1.png" alt="Summary Bubble Chart" width="600"/>
 
 ### Total Rides
 
-The following table shows the breakdown of total rides followed by a pie chart showing the percentages by city type:
+In the bubble chart shown above we can see how most of the urban cities have the greatest number of rides as most of their datapoints are above 15 total rides. For most suburban cities, total rides fall between 10 and 25 and for rural ones they most are between 5 and 10 rides per city.  The following column from the table above shows the breakdown of total rides followed by a pie chart showing the percentages by city type and confirms the observations in the bubble chart:
 
 | City Type | Total Rides |
 |:---       |         ---:| 
@@ -41,17 +41,19 @@ The following table shows the breakdown of total rides followed by a pie chart s
 | Suburban  |     625     |
 | Urban     |   1,625     |
 
-<img src="./analysis/Fig6.png" alt="% Rides by Type" width="600"/>
  
+
 Rural areas have a lot less people spread out than more densely populated urban areas. This logistical difference may play into the large difference of 125 vs 1,1625 rides in rural cities vs. urban ones. In most rural areas almost everyone has their own car for transportation so it is also a lot less likely that someone is in need of transportation from an outside source. When they do need a car they may be calling on neighbors and family to borrow one or to hitch a ride. This may be an opportunity to look into to see if people in rural areas tend to rely on someone else rather than reaching out to a mobile app service such as PyBer. ***
 
 Similar to rural areas, suburban cities also had a relatively low amount of riders compared to urban areas. Again, most people in these areas own one or more vehicles so even if one is not available they have another to use instead in many cases.
 
-From the chart we see that rural cities only made up 5.3% of the ride total while suburbs made up 26.3% and urban areas 68.4%.
+<img src="./analysis/Fig6.png" alt="% Rides by Type" width="600"/>
+
+We see a similar trend in the pie chart. Rural cities only make up 5.3% of the ride total while suburbs make up 26.3% and urban areas 68.4%.
 
 ### Total Drivers
 
-The following table shows the breakdown for total drivers followed by a pie chart showing the percentages by city type:
+The following table shows the breakdown for total drivers by city type:
 
 | City Type | Total Drivers |
 |:---       |           ---:| 
@@ -59,15 +61,19 @@ The following table shows the breakdown for total drivers followed by a pie char
 | Suburban  |       490     |
 | Urban     |     2,405     |
 
+Previously, we noted that both rural and suburban cities have significantly less rides than urban areas. It stands to reason that with less rides there would be less drivers as well and this data seems to correlate in a way to confirm that observation.
+
+From the pie chart we can see that rural cities make up a mere 2.6% of the driver pool. Suburban cities have almost 16.5% and and urban cities make up more than 80% of the drivers at PyBer:
+
 <img src="./analysis/Fig7.png" alt="% Drivers by Type" width="600"/>
 
-From the chart we can see that rural cities make up a mere 2.6% of the driver pool. Suburban cities have almost 16.5% and and urban cities make up more than 80% of the drivers at PyBer.
+In the bubble chart we see a similar result. The bubbles in the chart are much larger and in a greater number for Urban cities over suburban and rural ones:
 
-Previously, we noted that both rural and suburban cities have significantly less rides than urban areas. It stands to reason that with less rides there would be less drivers as well and this data seems to correlate in a way to confirm that observation.
+<img src="./analysis/Fig1.png" alt="Summary Bubble Chart" width="600"/>
 
 ### Total Fares
 
-The following table shows the breakdown for total fares followed by a pie chart showing the percentages for each city type:
+The following table shows the breakdown for total fares for each city type:
 | City Type | Total Fares |
 |:---       |         ---:| 
 | Rural     |  $4,327.93  |
@@ -76,7 +82,9 @@ The following table shows the breakdown for total fares followed by a pie chart 
 
 <img src="./analysis/Fig5.png" alt="% Fares by Type" width="600"/>
 
-Above, we can see that rural cities collected almost 7% of the total fares during this period. Suburban cities collected approximately 31% and urban ones 63% of all the fares. This is very similar to both the difference in number of drivers and rides, however, urban areas only collected approximately 2 times the amount of fares than suburban cities where the number of drivers was close to 5 times greater. This implies that the cost per ride in urban areas is less than the suburbs which was observed in the bubble chart above as well.  Possibly, the fares in urban areas are too low for the number of rides and this may be something to consider for the future. ***
+Above, we can see that rural cities collected almost 7% of the total fares during this period. Suburban cities collected approximately 31% and urban ones 63% of all the fares. This is very similar to both the difference in number of drivers and rides, however, urban areas only collected approximately 2 times the amount of fares than suburban cities where the number of drivers was close to 5 times greater. 
+
+This implies that the cost per ride in urban areas is less than the suburbs which was observed in the bubble chart above as well.  Possibly, the fares in urban areas are too low for the number of rides and this may be something to consider for the future. ***
 
 ### Average Fare per Ride
 
@@ -87,7 +95,7 @@ The following table shows the breakdown of average fares of a ride in each type 
 | Suburban  | $30.97                |
 | Urban     | $24.53                |  
 
-The summary bubble chart is included here as well to focus on the "Average Fare($)" on the vertical axis with the "Total Number of Rides (Per City) on the horizontal axis.
+The summary bubble chart is included here with a focus on the "Average Fare($)" on the vertical axis with the "Total Number of Rides (Per City)" on the horizontal axis.
 
 <img src="./analysis/Fig1.png" alt="Summary Bubble Chart" width="600"/>
 
@@ -104,11 +112,7 @@ The following table shows the breakdown of average fares charged by a driver in 
 | Suburban  | $39.50                  |
 | Urban     | $16.57                  |
 
-Once again, the summary bubble chart is included here too. This time we will focus on the "Average Fare($)" on the vertical axis with the size of the bubbles for each type of city.  As indicated in the note, the size of the bubbles correlate with the number of drivers in each city.
-
-<img src="./analysis/Fig1.png" alt="Summary Bubble Chart" width="600"/>
-
-For rural areas, there is very little difference in the size of the bubbles, indicating that most cities there have a lot less drivers than almost all of the other cities in both the suburbs and in urban areas. Since the bubbles fall on the left side of the chart and most are above the $30 range, we can conclude that the fares for most of the rural drivers are significantly higher than those in urban cities in which almost all of the bubbles fall below the $30 average fare.
+For rural areas, most of the bubbles fall on the left side of the chart and most are above the $30 range, we can conclude that the fares for most of the rural drivers are significantly higher than those in urban cities in which almost all of the bubbles fall below the $30 average fare.
 
 For suburban cities, the bubbles are almost all 2x larger than the rural ones and roughly 1/2 the size of Urban cities indicating that the number of drivers in the suburbs are in the middle range. The fares for most of the suburban drivers are in the $30 - $35 range while most of the urban fares fall in the $20 - $25 range. This is also a significant difference. Since suburban areas have quite a few more drivers than rural areas, this may be an area to look at when determining best fare prices for urban and suburban drivers. ***
 
